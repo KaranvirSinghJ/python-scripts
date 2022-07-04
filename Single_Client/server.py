@@ -1,6 +1,7 @@
 import socket
 import sys
 
+
 # Allows the computer to connect (creates socket for connection)
 def socket_create():
     try:
@@ -14,7 +15,7 @@ def socket_create():
         print("Socket creation error: " + str(msg))
 
 
-#Bind socket to port and wait for connection from client
+# Bind socket to port and wait for connection from client
 def socket_bind():
     try:
         global host 
@@ -28,7 +29,6 @@ def socket_bind():
         socket_bind()
 
 
-
 # Establishing connection with client (socket needs to be listening)
 def socket_accept():
     conn, address = s.accept()
@@ -37,7 +37,7 @@ def socket_accept():
     conn.close()
 
 
-#Send commands
+# Send commands
 def send_commands(conn):
     while True:
         cmd = input()
